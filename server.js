@@ -6,7 +6,6 @@ var bodyParser = require('body-parser');
 app.get('/',(req,res)=>{
     var lang = req.headers["accept-language"].split(",")[0];
     var software = req.headers["user-agent"].match(/\((.+?)\)/)[1];
-    var out="";
     var out = {"ipaddress":req.ip,"language":lang,"software":software};
    res.send(out); 
 });
