@@ -11,7 +11,7 @@ app.get('/',(req,res)=>{
    res.send(out); 
 });
 
-app.all((req,res)=>{
+app.get("/",(req,res)=>{
    res.send(req.body); 
 });
 
